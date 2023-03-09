@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div class="div">
+
+        
+    <h1>Выберите категорию</h1>
+    <input type="text"  v-model="name">
+    <select v-model="category" >
+        <option >real</option>
+        <option >barsa</option>
+        <option >nasr</option>
+    </select>
+
+    <button @click="add">Добавить игрока</button>
+</div>
+<div class="box">
+
+   <div class="category real">
+
+       <h2>Real Madrid</h2>
+       <li v-for="player in clubs.real" :key="player">
+           <p>{{ player }}</p>
+       </li>
+   </div>
+    
+   <div class="category barsa">
+       <h2>Barselona</h2>
+       <li v-for="player in clubs.barsa" :key="player">
+          
+           <p>{{ player }}</p>
+       </li>
+     </div>
+    
+     <div class="category nasr"> 
+
+         <h2>Al-Nasr</h2>
+         <li v-for="player in clubs.nasr" :key="player">
+             <p>{{ player }}</p>
+         </li>
+     </div>
+     
+    
+</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
